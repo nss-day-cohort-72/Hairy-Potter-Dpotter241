@@ -4,13 +4,13 @@
 let potteryId = 1;
 
 // Define the makePottery function
-function makePottery(shape, weight, height) {
+export function makePottery(shape, weight, height) {
     // Create a pottery object with the specified properties
-    const pottery = {
-        shape: shape,
-        weight: weight,
-        height: height,
-        id: potteryId
+    return {
+        shape,
+        weight,
+        height,
+        id: potteryId++
     };
 
     // Increment the potteryId for the next piece of pottery
@@ -19,6 +19,3 @@ function makePottery(shape, weight, height) {
     // Return the pottery object
     return pottery;
 }
-
-// Export the makePottery function
-module.exports = { makePottery };

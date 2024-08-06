@@ -1,20 +1,13 @@
 // scripts/Kiln.js
 
 // Define the firePottery function
-function firePottery(pottery, temperature) {
-    // Add the fired property with the value of true
+export function firePottery(pottery, temperature) {
+    // Add `fired` property
     pottery.fired = true;
 
-    // Add the cracked property based on the firing temperature
-    if (temperature > 2200) {
-        pottery.cracked = true;
-    } else {
-        pottery.cracked = false;
-    }
+    // Determine if the pottery is cracked
+    pottery.cracked = temperature > 2200;
 
-    // Return the augmented pottery object
+    // Return the augmented object
     return pottery;
 }
-
-// Export the firePottery function
-module.exports = { firePottery };

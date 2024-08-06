@@ -1,10 +1,10 @@
-// scripts/PotteryCatalog.js
+import { firePottery } from './Kiln.js';
 
 // Define a variable to store pottery that will be sold
 const potteryForSale = [];
 
-// Define the toSellOrNotToSell function
-function toSellOrNotToSell(pottery) {
+// Define and export the toSellOrNotToSell function
+export function toSellOrNotToSell(pottery) {
     // Check if the pottery is not cracked
     if (!pottery.cracked) {
         // Add price based on the weight of the pottery
@@ -22,14 +22,8 @@ function toSellOrNotToSell(pottery) {
     return pottery;
 }
 
-// Define the usePottery function
-function usePottery() {
+// Define and export the usePottery function
+export function usePottery() {
     // Return a copy of the array of items to be sold
     return potteryForSale.slice();
 }
-
-// Export the functions using module.exports
-module.exports = {
-    toSellOrNotToSell,
-    usePottery
-};
