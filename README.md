@@ -120,12 +120,15 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > I created the structure for HTML in index.html. Inside the html, I called on my PotteryList export to display all the pottery that matched the criteria of not being cracked, and displayed its size, weight, and price. The full PotteryList was the combined info from several steps. Starting from the PotteryWheel, we determined the array of pots that would be available to our other functions. Then I took that array and fired it in Kiln, determining which ones would be cracked. When I had a complete list of my pots that had survived the kiln filter, it was sent to PotteryCatalog, where its weight, height, and price were determined through a function. Finally, the array of pottery was fed to PotteryList to export. 
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > (https://www.loom.com/share/dd5031fb17144732b623e561046b7474?sid=5ee66802-381c-40ee-bf15-d1e57c3c8be1)
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > I do this because Im separating out different concerns and functionalities into different modules. This is helping helping me maintain clear and modular code that is easier to understand and debug if there are potential issues. This specific function is setup in its own module because it has a single responsibility (creating pottery objects) and making that function its own module helps to not only clear clutter from my main.js file, but helps with maintenance. This function focuses solely on creation of pottery, while Kiln focuses on firing and determining if it is cracked, and catalog is setting prices.
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > To accomplish this change, Id have to make some changes to the algorithm to handle the pricing and display of cracked pottery.
+   1. Id need to update pricing logic to include cracked pottery, adding them to the PotteryCatalog at a price of 2.50 regardless of weight
+   2. Id Adjust catalog management to include the cracked pottery to the array
+   3. Update Html generation to display the cracked pottery along with the uncracked but with different pricing
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > Phttps://www.loom.com/share/40f055c2fbdf4aff83483cfe1d605aec?sid=33ab4758-8e86-4ffd-8998-5cba2f4ea71e
