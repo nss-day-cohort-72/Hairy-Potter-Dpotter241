@@ -3,8 +3,8 @@
 // Define a variable to hold the primary key for each piece of pottery
 let potteryId = 1;
 
-// Define and export the makePottery function
-export function makePottery(shape, weight, height) {
+// Define the makePottery function
+function makePottery(shape, weight, height) {
     // Create a pottery object with the specified properties
     const pottery = {
         shape: shape,
@@ -19,3 +19,6 @@ export function makePottery(shape, weight, height) {
     // Return the pottery object
     return pottery;
 }
+
+// Export the makePottery function
+module.exports = { makePottery };
