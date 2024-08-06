@@ -8,6 +8,8 @@ export function firePottery(pottery, temperature) {
     // Determine if the pottery is cracked
     pottery.cracked = temperature > 2200;
 
+    debugger;
+
     // Return the augmented object
     return pottery;
 }

@@ -31,6 +31,8 @@ const potteryForSale3 = toSellOrNotToSell(firedPottery3);
 const potteryForSale4 = toSellOrNotToSell(firedPottery4);
 const potteryForSale5 = toSellOrNotToSell(firedPottery5);
 
+debugger;
+
 // Get the HTML for the pottery list
 const potteryHTML = PotteryList();
 
